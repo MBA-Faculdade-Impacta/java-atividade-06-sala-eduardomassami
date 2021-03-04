@@ -49,10 +49,38 @@ public class JavaSpringTemplateApplication {
 		produto.valor = 70.00;
 		
 		listaDeProdutos.add(produto);
+
+    Produto shorts = new Produto();
+		shorts.codigo = 2;
+		shorts.descricao = "Shorts";
+		shorts.valor = 57.50;
 		
-		Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 1);
+		listaDeProdutos.add(shorts);
+
+    Produto meia = new Produto();
+		meia.codigo = 3;
+		meia.descricao = "Meia";
+		meia.valor = 9.99;
 		
-		System.out.println(produtoEncontrado);
+		listaDeProdutos.add(meia);
+
+    Produto toca = new Produto();
+		toca.codigo = 4;
+		toca.descricao = "Toca";
+		toca.valor = 35.00;
+		
+		listaDeProdutos.add(toca);
+
+    Produto luvas = new Produto();
+		luvas.codigo = 5;
+		luvas.descricao = "Luvas";
+		luvas.valor = 19.50;
+		
+		listaDeProdutos.add(luvas);
+		
+		Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 2);
+		
+		System.out.println(produtoEncontrado.descricao);
 	}
 
 }
